@@ -1,1 +1,2 @@
-Check out http://shopify.github.com/dashing for more information.
+Nyanstagram for iOSアプリようのダッシュボードです。
+[Dashing](http://shopify.github.com/dashing) フレームワークを利用しています。
