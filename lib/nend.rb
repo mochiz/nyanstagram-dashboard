@@ -5,7 +5,6 @@ require 'active_support/core_ext'
 
 class Nend
   def initialize
-    # export NEND_URL=https://www.nend.net/admin/login/bS9hZHNwb3Q=; export NEND_MAIL=devops@qnyp.com; export NEND_PASSWORD=FyWXRFWTu6ihq7izuUDB
     # nend parameters
     @url      = ENV['NEND_URL']
     @mail     = ENV['NEND_MAIL']
