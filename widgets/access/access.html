@@ -1,0 +1,16 @@
+<h1 class="title" data-bind="title"></h1>
+
+<div class="left">
+  <span data-bind="last_day | prettyNumber"></span>
+  &nbsp;昨日
+</div>
+<div>
+  <span data-bind="last_week | prettyNumber"></span>
+  &nbsp;先週
+</div>
+<div>
+  <span data-bind="last_month | prettyNumber"></span>
+  &nbsp;先月
+</div>
+
+<p class="updated-at" data-bind="updatedAtMessage"></p>
