@@ -42,23 +42,6 @@ $ heroku config:add NEND_MAIL=example@qnyp.com
 $ heroku config:add NEND_PASSWORD=enter-your-passward
 ```
 
-Basic認証
-----
-Basic認証用の環境変数を設定して下さい。  
-環境変数を設定しなければ認証なしでアクセスできます。
-
-開発環境
-```
-$ export BASIC_AUTH_USERNAME=example@qnyp.com
-$ export BASIC_AUTH_PASSWORD=enter-your-password
-```
-
-Heroku
-```
-$ heroku config:add BASIC_AUTH_USERNAME=example@qnyp.com
-$ heroku config:add BASIC_AUTH_PASSWORD=enter-your-password
-```
-
 開発環境で確認
 ----
 `dashing`コマンドで起動します
