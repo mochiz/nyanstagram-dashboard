@@ -44,8 +44,8 @@ module NendReward
     #     ecpm:   eCPM（円/1000imps）
     #     reward: 報酬額
     #   }
-    def reward(opt = {})
-      page = NendReward::Page.get
+    def reward(options = {})
+      page = NendReward::Page.get(options)
       NendReward::PageParser.parsed_reward(page, APP_NAME)
     end
   end
