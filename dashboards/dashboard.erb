@@ -1,8 +1,9 @@
 <script type='text/javascript'>
 $(function() {
   Dashing.widget_base_dimensions = [300, 360]
-  Dashing.gridsterLayout('[{"col":1,"row":1},{"col":2,"row":1},{"col":2,"row":2},{"col":3,"row":1},{"col":3,"row":2},{"col":4,"row":1},{"col":5,"row":1}]')
+  Dashing.gridsterLayout('[{"col":1,"row":1},{"col":1,"row":2},{"col":2,"row":1},{"col":2,"row":2},{"col":3,"row":1},{"col":3,"row":2},{"col":4,"row":1},{"col":5,"row":1}]')
   Dashing.numColumns = 5
+  $('li#github').on('click', function(){ window.open('https://github.com/qnyp/nyanstagram-dashboard') })
 });
 </script>
 
@@ -12,6 +13,11 @@ $(function() {
   <ul>
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div data-view="Image" data-image="/logo.png"></div>
+    </li>
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1" id="github">
+      <div data-id="github" data-view="Text" data-title="View on GitHub" style="background-color:#86582f;"></div>
+      <i class="icon-github icon-background"></i>
     </li>
 
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
