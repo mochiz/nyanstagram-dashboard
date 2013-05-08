@@ -13,8 +13,8 @@ module NendReward
       @url        = NEND_URL
       @mail       = ENV['NEND_MAIL']
       @password   = ENV['NEND_PASSWORD']
-      @from_date  = 1.month.ago.beginning_of_month.strftime('%Y/%m/%d')
-      @to_date    = 1.month.ago.end_of_month.strftime('%Y/%m/%d')
+      @from_date  = opt[:from_date] || 1.month.ago.beginning_of_month.strftime('%Y/%m/%d')
+      @to_date    = opt[:to_date]   || 1.month.ago.end_of_month.strftime('%Y/%m/%d')
       @date_range = "#{@from_date} - #{@to_date}"
       @agent = Mechanize.new
     end
