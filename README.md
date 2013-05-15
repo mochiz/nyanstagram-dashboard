@@ -1,4 +1,4 @@
-Nyanstagram for iOSアプリ用のダッシュボードです。  
+Nyanstagram for iOSアプリ用のダッシュボードです。
 [Dashing](http://shopify.github.com/dashing) フレームワークで構築しています。
 
 必要なもの
@@ -10,45 +10,50 @@ Nyanstagram for iOSアプリ用のダッシュボードです。
 
 環境変数の設定
 ----
-Google Analytics, Nend情報取得用環境変数を設定してください。
+Google Analytics, Nend情報取得用環境変数を`.env`に設定してください。
 
 ### 開発環境
 
-Google Analytics
 ```
-$ export GA_USERNAME=example@qnyp.com
-$ export GA_PASSWORD=enter-your-passward
-$ export GA_UA_CODE=UA-********-1
-```
+$ cp .sample.env .env
+$ vi .env
 
-Nend
-```
-$ export NEND_MAIL=example@qnyp.com
-$ export NEND_PASSWORD=enter-your-passward
+# Google Analytics
+GA_USERNAME=example@qnyp.com
+GA_PASSWORD=enter-your-passward
+GA_UA_CODE=UA-********-1
+
+# Nend
+NEND_MAIL=example@qnyp.com
+NEND_PASSWORD=enter-your-passward
 ```
 
 ### Heroku
 
 Google Analytics
 ```
-$ heroku config:add GA_USERNAME=example@qnyp.com
-$ heroku config:add GA_PASSWORD=enter-your-passward
-$ heroku config:add GA_UA_CODE=UA-********-1
+$ heroku config:add \
+  GA_USERNAME=foo@example.com \
+  GA_PASSWORD=enter-your-passward \
+  GA_UA_CODE=UA-********-1
 ```
 
 Nend
 ```
-$ heroku config:add NEND_MAIL=example@qnyp.com
-$ heroku config:add NEND_PASSWORD=enter-your-passward
+$ heroku config:add \
+  NEND_MAIL=foo@example.com \
+  NEND_PASSWORD=enter-your-passward
 ```
 
 開発環境で確認
 ----
-`dashing`コマンドで起動します
+`foreman`を利用して起動します。
 
 ```
-$ bundle exec dashing start
+$ foreman start
 ```
+
+[http://localhost:3030](http://localhost:3030)にアクセスするとダッシュボードが表示されます。
 
 デプロイ
 ----
