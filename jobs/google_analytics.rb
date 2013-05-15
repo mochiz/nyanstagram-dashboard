@@ -4,8 +4,8 @@ SCHEDULER.every '15m', first_in: 0 do
   # ユーザー数
   send_event('user', GoogleAnalytics::NewVisits.get)
 
-  # アクセス数
-  send_event('access', GoogleAnalytics::AppViews.get)
+  # スクリーンビュー数
+  send_event('screen_view', GoogleAnalytics::AppViews.get)
 
   # 検索TOP10
   send_event('search_ranking', { items: GoogleAnalytics::SearchRankings.get })
