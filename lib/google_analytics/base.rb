@@ -12,6 +12,7 @@ module GoogleAnalytics
   class Base
     include GoogleAnalytics::DateRangeUtil
     extend Garb::Model
+    metrics :pageviews
 
     def initialize
       username = ENV['GA_USERNAME']
@@ -21,9 +22,20 @@ module GoogleAnalytics
       @profile = Garb::Management::Profile.all.detect {|p| p.web_property_id == ua_code}
     end
 
+    # Public: GoogleAnalyticsからの結果セットを返します
+    #
+    # option - オプションハッシュ
+    #
+    # Garb::ResultSet を返します
+    def get(options = {})
+      results(options)
+    end
+
     private
 
     # Internal: GoogleAnalyticsからの結果セットを返します
+    #
+    # option - オプションハッシュ
     #
     # Garb::ResultSet を返します
     def results(options = {})
